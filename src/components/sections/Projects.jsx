@@ -54,7 +54,7 @@ const CardContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 28px;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 `;
 
 const Projects = () => {
@@ -71,12 +71,10 @@ const Projects = () => {
         </Desc>
 
         <CardContainer>
-          {
-            projects.map((project) => <ProjectCard project={project} />)}
           {projects
-            .map((project) => (
-              <ProjectCard project={project} />
-            ))}
+              .map((project) => (
+                <ProjectCard project={project} />
+              ))}
         </CardContainer>
       </Wrapper>
     </Container>
